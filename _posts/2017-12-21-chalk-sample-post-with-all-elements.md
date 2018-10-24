@@ -1,102 +1,38 @@
 ---
 layout: post
-title: "Chalk sample post with all elements"
-description: "Have a look at all the predesigned elements you can use in Chalk."
+title: "나와 너의 연결고리"
+description: "Vanilla javascript를 사용하여 Todo 리스트 만들면서 작업한 내역, 느낀점"
 thumb_image: "documentation/sample-image.jpg"
-tags: [design, jekyll]
+tags: [til, web]
 ---
 
-Chalk uses the default Jekyll syntax highlighting gem Rouge. It has a customized style for both light and dark theme.
-Use the `highlight` tag to use the following code highlighting your preferred language:
+며칠 전 Vue를 접했다. 간편하고, 쉬웠다. 그러나 만지면 만질 수록 순수 자바스크립트가 필요하다는 것을 느꼈다.  
+구체적인 이유는 없다. Vue를 이렇게 저렇게 갖고 놀면서 자바스크립트가 작동하는 방식을 이해해야 Vue를 잘 다룰 수 있을 것 같다는 생각이 꾸준히 들었을 뿐.
 
-{% highlight html %}
-<!-- This is a comment -->
-<div class="grid">
-  <h1>This is a heading</h1>
-  <p>
-    This is a paragraph text.
-  </p>
-</div>
-{% endhighlight %}
+자바스크립트만을 이용해서 Todo 리스트를 만들어 보기로 했다.  
+어제 HTML을 사용하여 템플릿을 만들었다.
+그리고 오늘.
+1
+## 오늘 한 일
+- 자바스크립트
+    - 할 일 추가 명령을 내렸을 때, 할 일 섹션에 뿌려줄 리스트 템플릿을 생성하는 function 구현
+        - 추가 명령
+            1. 입력 폼에서 바로 엔터키를 입력 했을 때
+            2. 추가 버튼을 클릭했을 때  
 
-## Headings
+        - 입력하지 않고 추가 명령 시, 경고창 띄움
+    - 추가 명령 시 할 일 섹션에 뿌려주는 function 구현
+    - 추가 명령 시 할 일은 가장 위에 추가  
 
-Chalk includes 3 headings by default:
+**처음엔 템플릿과 뿌려주는 기능을 하나의 function으로 구현했음**  
+**재사용성을 생각하여 템플릿 생성과 뿌려주는 기능 분리**  
+**모듈화 시도했으나 실패 최종완성 후 다시 시도할 예정**
 
-## Heading first level
-### Heading second level
-#### Heading third level
+## 느낀점
+- 시도 때도 없이 올라오는 조바심, 자괴감 등 부정적인 감정 컨트롤은 힘들다ㅠㅠ
+- 목표한 기간동안 좋아질거라는 막연한 기대?
+- 프로그래밍 할 줄 안다고 생각했던 것들이 다 허상이었음을 자각한다
+- 구현은 힘들다
 
-{% highlight markdown %}
-## Heading first level
-### Heading second level
-#### Heading third level
-{% endhighlight %}
-
-## Lists
-
-Unordered list example:
-* Unordered list item 1
-* Unordered list item 2
-* Unordered list item 3
-* Unordered list item 4
-
-Ordered list example:
-1. Ordered list item 1
-2. Ordered list item 1
-3. Ordered list item 1
-4. Ordered list item 1
-
-{% highlight markdown %}
-* Unordered list item 1
-* Unordered list item 2
-
-1. Order list item 1
-2. Order list item 1
-{% endhighlight %}
-
-## Emoji support :star:
-
-Emoji's can be used everywhere in :cat2: your markdown!
-
-## Quotes
-
-A quote looks like this:
-
-> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna.
-
-{% highlight markdown %}
-> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna.
-{% endhighlight %}
-
-## Media
-
-Images can be added with a default `<img>` tag.
-If you wish that an image can be enlarged on click use the image include tag. You can pass 3 variables:
-- `path`: Image to show in the blog post.
-- `path-detail`: Image to show when enlarging.
-- `alt`: Alt text for image in blog post.
-
-{% include image.html path="documentation/sample-image.jpg" path-detail="documentation/sample-image@2x.jpg" alt="Sample image" %}
-
-{% highlight liquid %}
-{% raw %}
-{% include image.html path="documentation/sample-image.jpg"
-                      path-detail="documentation/sample-image@2x.jpg"
-                      alt="Sample image" %}
-{% endraw %}
-{% endhighlight %}
-
-Videos can be added and are responsive by default (4x3 by default, 16x9 with extra class).
-
-<div class="embed-responsive embed-responsive-16by9">
-<iframe src="https://www.youtube.com/embed/vO7m8Hre72E?modestbranding=1&autohide=1&showinfo=0&controls=0" allowfullscreen></iframe>
-</div>
-
-{% highlight html %}
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe src="url-to-video" allowfullscreen></iframe>
-</div>
-{% endhighlight %}
+## 내일 할 일
+- 수정, 삭세 기능 추가  
