@@ -4,6 +4,7 @@ Desktop.ini
 Thumbs.db
 
 # Project
+node_modules/
 !.keep
 *.sass-cache
 /_assets/yarn/
